@@ -24,7 +24,7 @@ jobs:
           node-version: 24
           cache: npm
       - run: npm ci
-      - name: Build static site (no server: games load straight from Lichess/Chess.com)
+      - name: Build static site (no server, games load straight from Lichess and Chess.com)
         run: npm run build
         env:
           VITE_STATIC: "true"
