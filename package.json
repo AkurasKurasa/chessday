@@ -1,0 +1,16 @@
+{
+  "name": "chessday",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Find the leaks in your chess: MERN app that pulls Lichess and Chess.com games, finds weak points, and builds a bot that plays like any player.",
+  "workspaces": ["server", "client"],
+  "scripts": {
+    "dev": "concurrently -n api,web -c yellow,magenta \"npm run dev -w server\" \"npm run dev -w client\"",
+    "build": "npm run build -w client",
+    "start": "npm start -w server",
+    "test": "npm test -w server"
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.5"
+  }
+}
